@@ -22,24 +22,39 @@
         @stack('js')
         {{-- 画面 個別のCSS読み込み --}}
         @stack('css')
+        {{-- 共通スタイル --}}
+        <style>
+            /* ハンバーガーメニューの棒の色 */
+            .navbar-toggler .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(108,117,125,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            }
+        </style>
     </head>
     <body>
-        <div class="min-h-screen bg-gray-100">
-            {{-- @include('layouts.navigation') --}}
+        <div class="min-vh-100 bg-light">
+            {{-- ページ ヘッダー --}}
+            <header>
+                @if (isset($header))
+                    {{ $header }}
+                @else
+                    {{-- 指定なし: ヘッダー ナビゲーション --}}
+                     @include('layouts.partials.navigation')
+                @endif
+            </header>
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
-            <main>
+            {{-- ページ コンテンツ --}}
+            <main class="p-2">
                 {{ $slot }}
             </main>
+            {{-- ページ フッター --}}
+            <footer>
+                @if (isset($footer))
+                    {{ $footer }}
+                @else
+                    {{-- 指定なし: フッター メニュー --}}
+                    @include('layouts.partials.bottom_menu')
+                @endif
+            </footer>
         </div>
     </body>
 </html>
