@@ -21,95 +21,112 @@
         .navbar-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(108,117,125,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
+        /* ハンバーガーメニューの棒の色 */
+
     </style>
 </head>
-<body>
-    <!-- Wrapper -->
-    <div class="min-vh-100 bg-light">
-        <header>
-            <!-- Nav start -->
-            <nav class="navbar bg-white border-bottom sticky-top shadow-sm">
-                <div class="container-fluid">
-                    <!-- 戻る -->
-                    <div>&lt;</div>
-                    <!-- ロゴ -->
-                    <a class="navbar-brand me-0" href="#">ロゴ</a>
-                    <!-- ハンバーガーメニュー -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!-- 隠しメニュー -->
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <form class="d-flex mt-3" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-                        </div>
+<body class="d-flex flex-column min-vh-100 bg-light">
+    <header>
+        <!-- Nav start -->
+        <nav class="navbar bg-white border-bottom sticky-top shadow-sm">
+            <div class="container-fluid">
+                <!-- 戻る -->
+                <div>&lt;</div>
+                <!-- ロゴ -->
+                <a class="navbar-brand me-0" href="#">ロゴ</a>
+                <!-- ハンバーガーメニュー -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- 隠しメニュー -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
-            </nav>
-            <!-- Nav end -->
-        </header>
-        <!-- main -->
-        <main>
-            aaa
-        </main>
-        <footer>
-            <!-- 固定 フッターメニュー -->
-            <div class="row w-full bg-dark text-white fixed-bottom">
-                <!-- 各フッターメニュー -->
-                <div class="col p-2">
-                    <a class="text-white text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-clock fw-bold"></i>
-                        <small class="mt-1">ホーム</small>
-                    </a>
-                </div>
-                <div class="col p-2">
-                    <a class="text-white text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-cart-shopping fw-bold"></i>
-                        <small class="mt-1">購入</small>
-                    </a>
-                </div>
-                <div class="col p-2">
-                    <a class="text-white text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-circle-info fw-bold"></i>
-                        <small class="mt-1">お知らせ</small>
-                    </a>
-                </div>
-                <div class="col p-2">
-                    <a class="text-white text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-circle-user fw-bold"></i>
-                        <small class="mt-1">プロフィール</small>
-                    </a>
+            </div>
+        </nav>
+        <!-- Nav end -->
+    </header>
+    <!-- main -->
+    <main class="p-2 d-flex align-items-center" style="flex: 1;">
+        <!-- wrapper -->
+        <div class="container h-100">
+            <div class="align-middle my-5">
+                <div class="card">
+
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <div class="text-secondary flex-row align-items-center fs-3  text-black-50 text-secondary">
+
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </main>
+    <footer class="mt-auto">
+        <!-- 固定 フッターメニュー -->
+        <div class="row w-full bg-dark text-white fixed-bottom">
+            <!-- 各フッターメニュー -->
+            <div class="col p-2">
+                <a class="text-white text-decoration-none d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-clock fw-bold"></i>
+                    <small class="mt-1">ホーム</small>
+                </a>
+            </div>
+            <div class="col p-2">
+                <a class="text-white text-decoration-none d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-cart-shopping fw-bold"></i>
+                    <small class="mt-1">購入</small>
+                </a>
+            </div>
+            <div class="col p-2">
+                <a class="text-white text-decoration-none d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-circle-info fw-bold"></i>
+                    <small class="mt-1">お知らせ</small>
+                </a>
+            </div>
+            <div class="col p-2">
+                <a class="text-white text-decoration-none d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-circle-user fw-bold"></i>
+                    <small class="mt-1">プロフィール</small>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
